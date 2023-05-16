@@ -1,0 +1,13 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.btn-check:focus+.btn,
+.btn:focus,
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus,
+.page-link:focus,
+.btn-close:focus,
+.accordion-button:focus {
+    box-shadow: unset;
+    border-color: inherit;
+}
