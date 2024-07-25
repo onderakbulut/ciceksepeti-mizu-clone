@@ -107,7 +107,6 @@
 <script>
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import { VueImageZoomer } from 'vue-image-zoomer'
 import 'vue-image-zoomer/dist/style.css';
 import comment from '../components/CommentComp.vue'
 
@@ -136,8 +135,13 @@ export default {
         }
     },
     components: {
-        VueImageZoomer,
         comment : comment
+    },
+    watch: {
+        '$route.params.id': function() {
+            this.id = Number(this.$route.params.id) || 1;
+            this.getProduct();
+        }
     },
     methods: {
         async getProduct(){
@@ -193,7 +197,7 @@ export default {
 
             }
         });
-        var productSlider = new Swiper('.product-gallery', {
+        new Swiper('.product-gallery', {
             lazy: true,
             spaceBetween: 0,
             centeredSlides: false,

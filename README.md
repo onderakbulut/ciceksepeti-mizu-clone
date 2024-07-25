@@ -1,7 +1,7 @@
 # Vue 3 Ciceksepeti - Mizu eCommerce
 Vue js Ciceksepeti e-commerce clone project
 
-Live : <a href="https://onderakbulut.com/demo-3" target="_blank"> https://onderakbulut.com/demo-3</a>
+Live : <a href="https://onderakbulut.com/demo-10" target="_blank"> https://onderakbulut.com/demo-10</a>
 
 Login \
 Username : test \
