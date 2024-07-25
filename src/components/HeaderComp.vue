@@ -84,7 +84,7 @@
                 <div class="search-wrapper" v-if="isActive">
                     <ul class="search-result list-unstyled mb-0">
                         <li v-for="product of products" :key="product.id">
-                            <router-link :to="{ name: 'productsingle', params: {id: product.id}}" class="d-flex align-items-center p-10">
+                            <RouterLink :to="{ name: 'productsingle', params: {id: product.id}}" class="d-flex align-items-center p-10">
                                 <div class="result-image me-2">
                                     <img :src="product.thumbnail" alt="" width="64" height="64">
                                 </div>
@@ -95,7 +95,7 @@
                                 <div class="ms-auto result-category">
                                     <a href="">{{ product.category }}</a>
                                 </div>
-                            </router-link>
+                            </RouterLink>
                         </li>
 
                     </ul>
@@ -114,7 +114,7 @@
                             <div class="dropdown-menu mega-dropdown">
                                 <RouterLink to="/allproducts" class="d-block mb-3">View all products <i class="las la-angle-right fs-14"></i></RouterLink>
                                 <ul class="list-unstyled row row-cols-5">
-                                    <li class="mb-2" v-for="category of state.categories" :key="category.id"><RouterLink :to="{ name: 'list', params: { category: category } }">{{ category }}</RouterLink></li>
+                                    <li class="mb-2" v-for="category of state.categories" :key="category.id"><RouterLink :to="{ name: 'list', params: { category: category.slug } }">{{ category.name }}</RouterLink></li>
                                    
                                 </ul>
                             </div>
